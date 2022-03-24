@@ -4,6 +4,23 @@ Simple SQL profiler output for Magento CLI commands
 ## Install
 To install `git clone` the module to `app/code/Shaun/Profiler`
 
+Add the profiler to the databse copnfiguration found in `app/etc/env.php`
+```
+'db' => [
+        ...
+        'connection' => [
+            ...
+            'default' => [
+               ...
+                'profiler' => [
+                    'class' => '\\Magento\\Framework\\DB\\Profiler',
+                    'enabled' => true
+                ]
+            ]
+        ]
+    ],
+ ```
+
 ## Uninstall
 1. Run `bin/magento module:disable Shaun_Profiler`
 2. Run `rm -rf app/code/Shaun/Profiler`
