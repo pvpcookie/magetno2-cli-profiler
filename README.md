@@ -4,7 +4,7 @@ Simple SQL profiler output for Magento CLI commands
 ## Install
 To install `git clone` the module to `app/code/Shaun/Profiler`
 
-Add the profiler to the databse copnfiguration found in `app/etc/env.php`
+Add the profiler to the database configuration found in `app/etc/env.php`
 ```
 'db' => [
         ...
