@@ -1,10 +1,27 @@
 # Introduction 
 Simple SQL profiler output for Magento CLI commands
 
-#Install
+## Install
 To install `git clone` the module to `app/code/Shaun/Profiler`
 
-#Uninstall
+Add the profiler to the database configuration found in `app/etc/env.php`
+```
+'db' => [
+        ...
+        'connection' => [
+            ...
+            'default' => [
+               ...
+                'profiler' => [
+                    'class' => '\\Magento\\Framework\\DB\\Profiler',
+                    'enabled' => true
+                ]
+            ]
+        ]
+    ],
+ ```
+
+## Uninstall
 1. Run `bin/magento module:disable Shaun_Profiler`
 2. Run `rm -rf app/code/Shaun/Profiler`
 3. Run `bin/magento setup:upgrade`
@@ -28,7 +45,7 @@ To install `git clone` the module to `app/code/Shaun/Profiler`
 4. Run `bin/magento setup:upgrade`
 5. Run `bin/magento setup:di:compile`
 
-#Example output
+## Example output
 ```
 +-------------+-----------------------------------------------+--------------+
 | Time 0.61ms | SQL[Total:5]                                  | Query params |
