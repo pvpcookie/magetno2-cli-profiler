@@ -64,7 +64,8 @@ class CliProfilerPlugin
                 wordwrap(
                     json_encode($query->getQueryParams()),
                     CliProfilerPlugin::PARAM_COLUMN_WIDTH,
-                    PHP_EOL
+                    PHP_EOL,
+                    true
                 )
             ];
 
